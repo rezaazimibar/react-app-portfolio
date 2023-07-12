@@ -1,38 +1,21 @@
-import "./App.css";
-import { ThemeProvider, createTheme } from "@mui/material";
-import rtlPlugin from "stylis-plugin-rtl";
-import { CacheProvider } from "@emotion/react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
-import createCache from "@emotion/cache";
-import { prefixer } from "stylis";
-import { Button } from "@mui/material";
+import { useState } from "react";
+import MainLayout from "./components/layouts/MinLayout";
+import SideBar from "./components/Slider";
+import ContentContainer from "./components/ContentContainer";
 
-const theme = createTheme({
-  direction: "rtl",
-  typography: {
-    fontFamily: "Vazir , Roboto",
-  },
-});
-const cacheRTL = createCache({
-  key: "muirtl",
-  stylisPlugins: [prefixer, rtlPlugin],
-});
-function App() {
+const App = () => {
+  const [value, setValue] = useState(0);
+  const handleChange = (value, newValue) => {
+    setValue(newValue);
+  };
   return (
-    <CacheProvider value={cacheRTL}>
-      {" "}
-      <ThemeProvider theme={theme}>
-        <HelmetProvider>
-          <Helmet>
-            <title>وب سایت </title>
-          </Helmet>
-          <div className="App">
-            <Button variant="contained">کلید کنید</Button>
-          </div>
-        </HelmetProvider>
-      </ThemeProvider>
-    </CacheProvider>
+    <>
+      <MainLayout>
+        <SideBar value={value} handleChange={handleChange} />
+        <ContentContainer />
+      </MainLayout>
+    </>
   );
-}
+};
 
 export default App;
