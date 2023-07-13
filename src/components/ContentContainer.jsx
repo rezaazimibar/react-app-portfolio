@@ -12,7 +12,6 @@ const ContentContainer = ({ children }) => {
         xl={10}
         sx={{ backgroundColor: "secondary.main" }}
       >
-        <Typography variant="h2">بخش اصلی</Typography>
         {children}
       </Grid>
     </>

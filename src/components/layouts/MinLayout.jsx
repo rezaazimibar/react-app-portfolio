@@ -25,7 +25,6 @@ const MainLayout = ({ children }) => {
             <Helmet>
               <title>وب سایت </title>
             </Helmet>
-
             <Grid container sx={{ height: "100vh" }}>
               {children}
             </Grid>
