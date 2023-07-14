@@ -1,4 +1,4 @@
-import { ThemeProvider, Typography } from "@mui/material";
+import { ThemeProvider} from "@mui/material";
 import rtlPlugin from "stylis-plugin-rtl";
 import { CacheProvider } from "@emotion/react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
@@ -7,10 +7,8 @@ import { prefixer } from "stylis";
 
 import Grid from "@mui/material/Unstable_Grid2";
 
-import SideBar from "../Slider";
-import { theme } from "../UI/theme";
+import {theme} from "./theme";
 
-import ContentContainer from "../ContentContainer";
 
 const cacheRTL = createCache({
   key: "muirtl",
