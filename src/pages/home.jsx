@@ -1,7 +1,43 @@
-import { Box, Typography } from "@mui/material";
+import { useEffect, useRef, useCallback } from "react";
+import { Box, Container, Typography } from "@mui/material";
 import bg1 from "../assets/wallhaven-1kpjjw.jpg";
-
+import Typed from "typed.js";
+import Particles from "react-particles";
+import { loadFull } from "tsparticles";
+import { links, hexagon } from "../constants/Particles";
 const Home = () => {
+  const nameEl = useRef(null);
+  const infoEl = useRef(null);
+  const string = ["توسعه دهنده ریکت ", "توسعه دهنده فرانت اند", "فریلنسر"];
+  useEffect(() => {
+    const typedName = new Typed(nameEl.current, {
+      strings: ["[[رضا عظیمی]]"],
+      typeSpeed: 50,
+      backSpeed: 20,
+      backDelay: 10,
+      showCursor: false,
+    });
+    const typedInfo = new Typed(infoEl.current, {
+      strings: string,
+      startDelay: 1000,
+      typeSpeed: 80,
+      backSpeed: 50,
+      backDelay: 50,
+      loop: true,
+      showCursor: false,
+    });
+    return () => {
+      typedName.destroy();
+      typedInfo.destroy();
+    };
+  }, []);
+
+  const particlesInit = useCallback(async (engine) => {
+    await loadFull(engine);
+  }, []);
+  const particlesLoaded = useCallback(async (container) => {
+    await console.log(container);
+  }, []);
   return (
     <>
       <Box
@@ -17,16 +53,19 @@ const Home = () => {
           alignItems: "center",
         }}
       >
-        <Typography variant="h3" color="tomato">
-          [[رضا عظیمی]]
-        </Typography>
+        <Particles
+          id="tsparticles"
+          init={particlesInit}
+          loaded={particlesLoaded}
+          options={links}
+        />
+        <Typography ref={nameEl} variant="h3" color="tomato"></Typography>
         <Typography
+          ref={infoEl}
           variant="h4"
           color="whiteSmoke"
           sx={{ textDecoration: "underline", textDecorationColor: "tomato" }}
-        >
-          توسعه دهنده فرانت اند
-        </Typography>
+        ></Typography>
       </Box>
     </>
   );

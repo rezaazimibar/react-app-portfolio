@@ -8,7 +8,7 @@ import SwipeableViews from "react-swipeable-views";
 import SideBarContainer from "./SidebarContainer";
 import MainContext from "../context/index";
 import DrawerActionButton from "../components/drawer/drawerActionButton";
-import {Home} from "../pages/index";
+import { About, Home } from "../pages/index";
 const AppContainer = () => {
   const [pageNumber, setPageNumber] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -33,9 +33,7 @@ const AppContainer = () => {
                 <Home />
               </Page>
               <Page pageNumber={pageNumber} index={1}>
-                <Typography variant="h5" sx={{ textAlign: "center" }}>
-                  درباره من
-                </Typography>
+                <About />
               </Page>
               <Page pageNumber={pageNumber} index={2}>
                 <Typography variant="h5" sx={{ textAlign: "center" }}>
