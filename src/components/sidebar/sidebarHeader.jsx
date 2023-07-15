@@ -1,9 +1,10 @@
 import { Avatar, Typography } from "@mui/material";
+import avatar from "../../assets/Avatar.jpg";
 const SidebarHeader = () => {
   return (
     <>
       <Avatar
-        src={require("../../assets/Avatar.jpg")}
+        src={avatar}
         variant="rounded"
         sx={{
           height: "200px",

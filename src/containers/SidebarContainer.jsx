@@ -10,7 +10,12 @@ const SideBarContainer = ({ children }) => {
         md={3}
         lg={2}
         xl={2}
-        sx={{ backgroundColor: grey[900] }}
+        sx={{
+          backgroundColor: grey[900],
+          height: "100vh",
+          overflowY: "auto",
+          overflowX: "hidden",
+        }}
       >
         {children}
       </Grid>

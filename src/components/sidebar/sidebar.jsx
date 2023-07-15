@@ -1,12 +1,9 @@
-import DrawerContent from "./sidebarContent";
-
+import SidebarContent from "./sidebarContent";
 import SidebarDrawer from "../drawer/sidebarDrawer";
-import DrawerActionButton from "../drawer/drawerActionButton";
 const SideBar = () => {
   return (
     <>
-      <DrawerActionButton />
-      <DrawerContent />
+      <SidebarContent />
       <SidebarDrawer />
     </>
   );
