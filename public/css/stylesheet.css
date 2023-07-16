@@ -21,8 +21,24 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'tanha';
+  src: url('../font/Tanha.eot');
+  src: url('../font/Tanha.eot?#iefix') format('embedded-opentype'),
+      url('../font/Tanha.woff2') format('woff2'),
+      url('../font/Tanha.woff') format('woff'),
+      url('../font/Tanha.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
   margin: 0;
   padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.MuiCard-root::-webkit-scrollbar {
+  display: none;
 }

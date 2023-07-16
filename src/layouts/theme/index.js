@@ -6,10 +6,10 @@ export const theme = createTheme({
     mode: "dark",
   },
   typography: {
-    fontFamily: "Vazir , Roboto",
+    fontFamily: "tanha,Vazir , Roboto",
     h1: {
       fontSize: "2rem",
     },
   },
 });
-export default theme
+export default theme;

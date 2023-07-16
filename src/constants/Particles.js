@@ -149,19 +149,19 @@ export const links = {
   },
   particles: {
     color: {
-      value: "#ff0000",
-      animation: {
-        enable: true,
-        speed: 20,
-        sync: true,
-      },
+      value: "#ffCC00",
+      // animation: {
+      //   enable: true,
+      //   speed: 20,
+      //   sync: true,
+      // },
     },
     lineLinked: {
-      blink: false,
-      color: "random",
-      consent: false,
+      blink: true,
+      color: "ffCC00",
+      consent: true,
       distance: 30,
-      enable: true,
+      enable: false,
       opacity: 0.3,
       width: 0.5,
     },
@@ -177,7 +177,7 @@ export const links = {
       direction: "none",
       enable: true,
       outMode: "bounce",
-      random: true,
+      random: false,
       speed: 0.5,
       straight: false,
     },
@@ -193,7 +193,7 @@ export const links = {
       animation: {
         enable: true,
         minimumValue: 0.05,
-        speed: 2,
+        speed: 10,
         sync: false,
       },
       random: false,
@@ -216,7 +216,7 @@ export const links = {
   polygon: {
     draw: {
       enable: true,
-      lineColor: "rgba(255,255,255,0.2)",
+      lineColor: "ffCC00",
       lineWidth: 0.3,
     },
     move: {
