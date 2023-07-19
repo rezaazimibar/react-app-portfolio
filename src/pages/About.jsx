@@ -9,6 +9,7 @@ import {
   Chip,
   Avatar,
 } from "@mui/material";
+import { Helmet } from "react-helmet-async";
 import { grey } from "@mui/material/colors";
 import Grid from "@mui/material/Unstable_Grid2";
 import man from "../assets/man.png";
@@ -67,6 +68,9 @@ const About = () => {
           overflowY: "scroll",
         }}
       >
+        <Helmet>
+          <title>وبسایت رضا عظیمی|درباره من</title>
+        </Helmet>
         <CardContent>
           <Grid container sx={{ mx: 3 }}>
             <Grid xs={12} sm={12} md={8} lg={8} xl={8}>

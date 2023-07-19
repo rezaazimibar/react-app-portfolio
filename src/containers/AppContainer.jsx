@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MainLayout from "../layouts/MinLayout";
 import SideBar from "../components/sidebar/sidebar";
 import PagesContainer from "./pagesContainer";
 import Page from "../pages/conponent/page";
-import { Box, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import SwipeableViews from "react-swipeable-views";
 import SideBarContainer from "./SidebarContainer";
 import MainContext from "../context/index";
@@ -12,7 +12,6 @@ import { About, Home } from "../pages/index";
 const AppContainer = () => {
   const [pageNumber, setPageNumber] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
-
   const handlePageNumber = (value, newValue) => {
     setPageNumber(newValue);
   };

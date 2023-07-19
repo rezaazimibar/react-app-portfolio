@@ -1,5 +1,9 @@
-import { Avatar, Typography } from "@mui/material";
+import { Avatar, Box, IconButton, Typography } from "@mui/material";
+import { RandomReveal } from "react-random-reveal";
 import avatar from "../../assets/Avatar.jpg";
+import { alphabetPersian } from "../../constants/alphabet";
+
+import { GitHub,Instagram, Twitter,LinkedIn } from "@mui/icons-material";
 const SidebarHeader = () => {
   return (
     <>
@@ -23,15 +27,65 @@ const SidebarHeader = () => {
         N/A
       </Avatar>
       <Typography variant="h5" color="whitesmoke" sx={{ textAlign: "center" }}>
-        نام مخاطب
+        <Typography variant="caption" color="tomato">
+          {"{{"}
+        </Typography>
+        <RandomReveal
+          isPlaying
+          duration={4}
+          characters="رضا عظیمی"
+          characterSet={alphabetPersian}
+        />
+        <Typography variant="caption" color="tomato">
+          {"}}"}
+        </Typography>
       </Typography>
-      <Typography
-        variant="caption"
-        color="whitesmoke"
-        sx={{ textAlign: "center" }}
-      >
-        توضیحات مخاطب کوتاه و مختصر
+      <Typography variant="caption" color="grey" sx={{ textAlign: "center" }}>
+        <RandomReveal
+          isPlaying
+          duration={4}
+          characters="برنامه نویس فرانت اند دولوپر"
+          characterSet={alphabetPersian}
+        />
       </Typography>
+      <Box component="div" sx={{ m: "0 auto", textAlign: "center" }}>
+        <IconButton aria-label="Github">
+          <a
+            href="https://github.com/rezaazimibar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHub sx={{color:"grey"}} />
+          </a>
+        </IconButton>
+        <IconButton aria-label="Github">
+          <a
+            href="https://github.com/rezaazimibar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Instagram sx={{color:"grey"}} />
+          </a>
+        </IconButton>
+        <IconButton aria-label="Github">
+          <a
+            href="https://github.com/rezaazimibar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedIn sx={{color:"grey"}} />
+          </a>
+        </IconButton>
+        <IconButton aria-label="Github">
+          <a
+            href="https://github.com/rezaazimibar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Twitter sx={{color:"grey"}} />
+          </a>
+        </IconButton>
+      </Box>
     </>
   );
 };

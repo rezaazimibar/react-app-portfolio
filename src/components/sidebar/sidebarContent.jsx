@@ -7,10 +7,10 @@ import SidebarTabs from "./SidebarTabs";
 const SidebarContent = () => {
   return (
     <>
-      <Box sx={{ textAlign: "center", justifyContent: "center" }}>
+      <Box sx={{ textAlign: "center", justifyContent: "center", width:"15rem" }}>
         <SidebarHeader />
 
-        <Divider variant="middle" color={grey[900]} sx={{ mt: 2 }} />
+        <Divider variant="middle" color={grey[900]}  />
         <SidebarTabs/>
         <Divider variant="middle" color={grey[900]} sx={{ mt: 2 }} />
         <SidebarFooter />

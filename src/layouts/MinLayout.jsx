@@ -20,9 +20,7 @@ const MainLayout = ({ children }) => {
       <CacheProvider value={cacheRTL}>
         <ThemeProvider theme={theme}>
           <HelmetProvider>
-            <Helmet>
-              <title>وب سایت </title>
-            </Helmet>
+
             <Grid container sx={{ height: "100vh" }}>
               {children}
             </Grid>

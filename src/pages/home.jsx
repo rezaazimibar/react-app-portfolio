@@ -6,11 +6,12 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import TextTransition, { presets } from "react-text-transition";
 import { links } from "../constants/Particles";
+import { Helmet } from "react-helmet-async";
 const Home = () => {
   const [index, setIndex] = useState(0);
   const nameEl = useRef(null);
   const infoEl = useRef(null);
-  const string = [" ریکت ", " فرانت اند", "فریلنسر"];
+  const string = ["برنامه نویس ریکت  ", " برنامه نویس فرانت اند", "فریلنسر"];
   useEffect(() => {
     const typedName = new Typed(nameEl.current, {
       strings: ["رضا عظیمی"],
@@ -52,6 +53,9 @@ const Home = () => {
           alignItems: "center",
         }}
       >
+        <Helmet>
+          <title>وبسایت رضا عظیمی|صفحه اصلی</title>
+        </Helmet>
         <Particles
           id="tsparticles"
           init={particlesInit}
@@ -69,7 +73,9 @@ const Home = () => {
         </Box>
 
         <Box component="div" sx={{ display: "flex" }}>
-          {" "}
+          <Typography variant="h4" color="whitesmoke" sx={{ mt: 4, mr: 1 }}>
+            هستم
+          </Typography>{" "}
           <TextTransition springConfig={presets.wobbly}>
             <Typography
               ref={infoEl}

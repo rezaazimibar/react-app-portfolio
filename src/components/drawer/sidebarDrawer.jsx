@@ -13,7 +13,7 @@ const SidebarDrawer = () => {
         onClose={() => setDrawerOpen(false)}
         sx={{
           "& .MuDrawer-paper": {
-            width: 400,
+           
           },
           display: {
             lg: "none",
