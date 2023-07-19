@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import MainLayout from "../layouts/MinLayout";
 import SideBar from "../components/sidebar/sidebar";
 import PagesContainer from "./pagesContainer";
@@ -8,7 +8,7 @@ import SwipeableViews from "react-swipeable-views";
 import SideBarContainer from "./SidebarContainer";
 import MainContext from "../context/index";
 import DrawerActionButton from "../components/drawer/drawerActionButton";
-import { About, Home } from "../pages/index";
+import { About, Home, Resume } from "../pages/index";
 const AppContainer = () => {
   const [pageNumber, setPageNumber] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -36,7 +36,7 @@ const AppContainer = () => {
               </Page>
               <Page pageNumber={pageNumber} index={2}>
                 <Typography variant="h5" sx={{ textAlign: "center" }}>
-                  رزومه من
+                  <Resume helmetTitle="وبسات رضا عظیمی|رزومه" />
                 </Typography>
               </Page>
               <Page pageNumber={pageNumber} index={3}>

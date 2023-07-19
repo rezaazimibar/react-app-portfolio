@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { devSkills } from "../constants/Skills";
 import {
-  Box,
   Typography,
   Card,
   CardContent,
@@ -10,15 +9,12 @@ import {
   Avatar,
 } from "@mui/material";
 import { Helmet } from "react-helmet-async";
-import { grey } from "@mui/material/colors";
+
 import Grid from "@mui/material/Unstable_Grid2";
 import man from "../assets/man.png";
 import DevInfo from "./conponent/DevInfo";
 import {
   CodeRounded,
-  KeyboardArrowLeftRounded,
-  StayPrimaryLandscape,
-  VerticalAlignBottom,
   AccessibilityNew,
 } from "@mui/icons-material";
 import Skill from "./conponent/Skill";
