@@ -8,7 +8,7 @@ import SwipeableViews from "react-swipeable-views";
 import SideBarContainer from "./SidebarContainer";
 import MainContext from "../context/index";
 import DrawerActionButton from "../components/drawer/drawerActionButton";
-import { About, Home, Resume, WorkSamples } from "../pages/index";
+import { About, Home, Resume, WorkSamples, Comment } from "../pages/index";
 const AppContainer = () => {
   const [pageNumber, setPageNumber] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -46,7 +46,7 @@ const AppContainer = () => {
               </Page>
               <Page pageNumber={pageNumber} index={4}>
                 <Typography variant="h5" sx={{ textAlign: "center" }}>
-                  نظرات
+                  <Comment helmetTitle="وبسایت رضاعظیمی|نظرات" />
                 </Typography>
               </Page>
               <Page pageNumber={pageNumber} index={5}>
