@@ -2,11 +2,13 @@ import { Avatar, Box, IconButton, Typography } from "@mui/material";
 import { RandomReveal } from "react-random-reveal";
 import avatar from "../../assets/Avatar.jpg";
 import { alphabetPersian } from "../../constants/alphabet";
+import ThemeActionButton from "../ThemeActionButton";
 
-import { GitHub,Instagram, Twitter,LinkedIn } from "@mui/icons-material";
+import { GitHub, Instagram, Twitter, LinkedIn } from "@mui/icons-material";
 const SidebarHeader = () => {
   return (
     <>
+      <ThemeActionButton />
       <Avatar
         src={avatar}
         variant="rounded"
@@ -30,17 +32,19 @@ const SidebarHeader = () => {
         <Typography variant="caption" color="tomato">
           {"{{"}
         </Typography>
-        <RandomReveal
-          isPlaying
-          duration={4}
-          characters="رضا عظیمی"
-          characterSet={alphabetPersian}
-        />
+        <Typography variant="span" color="text.primary" >
+          <RandomReveal
+            isPlaying
+            duration={4}
+            characters="رضا عظیمی"
+            characterSet={alphabetPersian}
+          />
+        </Typography>
         <Typography variant="caption" color="tomato">
           {"}}"}
         </Typography>
       </Typography>
-      <Typography variant="caption" color="grey" sx={{ textAlign: "center" }}>
+      <Typography variant="caption" color="text.primary" sx={{ textAlign: "center" }}>
         <RandomReveal
           isPlaying
           duration={4}
@@ -55,7 +59,7 @@ const SidebarHeader = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GitHub sx={{color:"grey"}} />
+            <GitHub sx={{ color: "grey" }} />
           </a>
         </IconButton>
         <IconButton aria-label="Github">
@@ -64,7 +68,7 @@ const SidebarHeader = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Instagram sx={{color:"grey"}} />
+            <Instagram sx={{ color: "grey" }} />
           </a>
         </IconButton>
         <IconButton aria-label="Github">
@@ -73,7 +77,7 @@ const SidebarHeader = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <LinkedIn sx={{color:"grey"}} />
+            <LinkedIn sx={{ color: "grey" }} />
           </a>
         </IconButton>
         <IconButton aria-label="Github">
@@ -82,7 +86,7 @@ const SidebarHeader = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Twitter sx={{color:"grey"}} />
+            <Twitter sx={{ color: "grey" }} />
           </a>
         </IconButton>
       </Box>

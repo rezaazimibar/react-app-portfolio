@@ -1,7 +1,8 @@
 import Grid from "@mui/material/Unstable_Grid2";
 import { grey } from "@mui/material/colors";
-
+import { useTheme } from "@mui/material/styles";
 const SideBarContainer = ({ children }) => {
+  const theme = useTheme();
   return (
     <>
       <Grid
@@ -11,7 +12,8 @@ const SideBarContainer = ({ children }) => {
         lg={2}
         xl={2}
         sx={{
-          backgroundColor: grey[900],
+          backgroundColor:
+            theme.palette.mode === "dark" ? grey[900] : grey[200],
           height: "100vh",
           overflowY: "auto",
           overflowX: "hidden",

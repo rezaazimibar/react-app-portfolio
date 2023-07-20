@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MainLayout from "../layouts/MinLayout";
 import SideBar from "../components/sidebar/sidebar";
 import PagesContainer from "./pagesContainer";
 import Page from "../pages/conponent/page";
-import { Typography } from "@mui/material";
+import { Typography, useMediaQuery } from "@mui/material";
 import SwipeableViews from "react-swipeable-views";
 import SideBarContainer from "./SidebarContainer";
 import MainContext from "../context/index";
@@ -12,15 +12,31 @@ import { About, Home, Resume, WorkSamples, Comment } from "../pages/index";
 const AppContainer = () => {
   const [pageNumber, setPageNumber] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [mode, setMode] = useState();
   const handlePageNumber = (value, newValue) => {
     setPageNumber(newValue);
   };
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme:dark)");
+  useEffect(() => {
+    setMode(prefersDarkMode ? "dark" : "light");
+  }, []);
+
+  const handleThemeChange = () => {
+    setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+  };
+
   return (
     <>
       <MainContext.Provider
-        value={{ pageNumber, handlePageNumber, drawerOpen, setDrawerOpen }}
+        value={{
+          pageNumber,
+          handlePageNumber,
+          handleThemeChange,
+          drawerOpen,
+          setDrawerOpen,
+        }}
       >
-        <MainLayout>
+        <MainLayout mode={mode}>
           <SideBarContainer>
             <SideBar />
           </SideBarContainer>

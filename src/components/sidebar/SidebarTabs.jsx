@@ -3,11 +3,14 @@ import { grey } from "@mui/material/colors";
 import { Tabs, Tab } from "@mui/material";
 import { tabsData } from "../data/tabsData.sidebar";
 import MainContext from "../../context";
+import { useTheme } from "@mui/material/styles";
+import { dark } from "@mui/material/styles/createPalette";
 const SidebarTabs = () => {
   const { pageNumber, handlePageNumber, setDrawerOpen } =
     useContext(MainContext);
 
   const data = tabsData();
+  const theme = useTheme();
   return (
     <>
       <Tabs
@@ -27,7 +30,8 @@ const SidebarTabs = () => {
             sx={{
               "&.MuiTab-root": {
                 minHeight: 50,
-                backgroundColor: grey[800],
+                backgroundColor:
+                  theme.palette.mode === "dark" ? grey[800] : grey[300],
                 my: 0.5,
                 mx: 1,
                 borderRadius: 2,
