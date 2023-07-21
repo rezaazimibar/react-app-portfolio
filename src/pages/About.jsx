@@ -13,12 +13,11 @@ import { Helmet } from "react-helmet-async";
 import Grid from "@mui/material/Unstable_Grid2";
 import man from "../assets/man.png";
 import DevInfo from "./conponent/DevInfo";
-import {
-  CodeRounded,
-  AccessibilityNew,
-} from "@mui/icons-material";
+import { CodeRounded, AccessibilityNew } from "@mui/icons-material";
+import { useTheme } from "@mui/material";
 import Skill from "./conponent/Skill";
 import { from } from "stylis";
+import { grey } from "@mui/material/colors";
 const About = () => {
   const [javascript, setJavascript] = useState(0);
   const [html, setHtml] = useState(0);
@@ -53,6 +52,7 @@ const About = () => {
       clearInterval(timer);
     };
   }, []);
+  const theme = useTheme();
 
   const { htmlSkill, cssSkill, jsSkill, reactSkill, nodeSkill } = devSkills;
   return (
@@ -60,7 +60,8 @@ const About = () => {
       <Card
         sx={{
           height: "100vh",
-          backgroundColor: "whitesmoke",
+          backgroundColor:
+            theme.palette.mode === "dark" ? grey[900] : "whitesmoke",
           overflowY: "scroll",
         }}
       >

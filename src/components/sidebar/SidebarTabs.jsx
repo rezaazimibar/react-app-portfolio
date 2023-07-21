@@ -4,7 +4,6 @@ import { Tabs, Tab } from "@mui/material";
 import { tabsData } from "../data/tabsData.sidebar";
 import MainContext from "../../context";
 import { useTheme } from "@mui/material/styles";
-import { dark } from "@mui/material/styles/createPalette";
 const SidebarTabs = () => {
   const { pageNumber, handlePageNumber, setDrawerOpen } =
     useContext(MainContext);

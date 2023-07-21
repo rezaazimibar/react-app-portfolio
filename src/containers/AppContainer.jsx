@@ -3,12 +3,12 @@ import MainLayout from "../layouts/MinLayout";
 import SideBar from "../components/sidebar/sidebar";
 import PagesContainer from "./pagesContainer";
 import Page from "../pages/conponent/page";
-import { Typography, useMediaQuery } from "@mui/material";
+import { TextField, Typography, useMediaQuery } from "@mui/material";
 import SwipeableViews from "react-swipeable-views";
 import SideBarContainer from "./SidebarContainer";
 import MainContext from "../context/index";
 import DrawerActionButton from "../components/drawer/drawerActionButton";
-import { About, Home, Resume, WorkSamples, Comment } from "../pages/index";
+import { About, Home, Resume, WorkSamples, Comment,Contact } from "../pages/index";
 const AppContainer = () => {
   const [pageNumber, setPageNumber] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -53,6 +53,7 @@ const AppContainer = () => {
               <Page pageNumber={pageNumber} index={2}>
                 <Typography variant="h5" sx={{ textAlign: "center" }}>
                   <Resume helmetTitle="وبسات رضا عظیمی|رزومه" />
+            
                 </Typography>
               </Page>
               <Page pageNumber={pageNumber} index={3}>
@@ -67,7 +68,7 @@ const AppContainer = () => {
               </Page>
               <Page pageNumber={pageNumber} index={5}>
                 <Typography variant="h5" sx={{ textAlign: "center" }}>
-                  ارتباط با من
+                  <Contact helmetTitle="وبسات رضا عظیمی|ارتباط با من" />
                 </Typography>
               </Page>
             </SwipeableViews>

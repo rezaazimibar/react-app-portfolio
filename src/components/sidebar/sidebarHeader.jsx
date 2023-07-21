@@ -32,7 +32,7 @@ const SidebarHeader = () => {
         <Typography variant="caption" color="tomato">
           {"{{"}
         </Typography>
-        <Typography variant="span" color="text.primary" >
+        <Typography variant="span" color="text.primary">
           <RandomReveal
             isPlaying
             duration={4}
@@ -44,7 +44,11 @@ const SidebarHeader = () => {
           {"}}"}
         </Typography>
       </Typography>
-      <Typography variant="caption" color="text.primary" sx={{ textAlign: "center" }}>
+      <Typography
+        variant="caption"
+        color="text.primary"
+        sx={{ textAlign: "center" }}
+      >
         <RandomReveal
           isPlaying
           duration={4}
@@ -73,7 +77,7 @@ const SidebarHeader = () => {
         </IconButton>
         <IconButton aria-label="Github">
           <a
-            href="https://github.com/rezaazimibar"
+            href="https://www.linkedin.com/feed/?trk=homepage-basic_sign-in-submit"
             target="_blank"
             rel="noopener noreferrer"
           >

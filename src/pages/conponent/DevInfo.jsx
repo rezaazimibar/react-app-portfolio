@@ -4,7 +4,7 @@ const DevInfo = ({ children }) => {
   return (
     <>
       {" "}
-      <Typography variant="body1" color="black" textAlign="left" sx={{ mt: 2 }}>
+      <Typography variant="body1" color="text.primary" textAlign="left" sx={{ mt: 2 }}>
         {children}
         <KeyboardArrowLeftRounded
           sx={{
